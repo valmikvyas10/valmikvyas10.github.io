@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --bg-color: #0d1117; /* GitHub Dark Mode Background */
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --card-bg: #161b22;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid #30363d;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #ffffff;}
+        h2 { border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; margin-top: 3rem;}
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* PROJECT GRID */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        .tech-stack {
+            font-size: 0.85rem;
+            color: #8b949e;
+            margin-top: 0.5rem;
+        }
+        
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>[Valmik Vyas]</h1>
+            <p>Computer Science Student | Full Stack Developer | AI Enthusiast</p>
+            <p>
+                <a href="https://github.com/valmikvyas10">GitHub</a> • 
+                <a href="mailto:vyas40@purdue.edu">Email</a> • 
+                <a href="linkedin.com/in/valmik-vyas-8174b0231/">LinkedIn</a>
+            </p>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm a developer passionate about building software that solves real-world problems. 
+                Currently focusing on Machine Learning and Large Language Models.
+            </p>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <h3>Aligning Risk/Opportunity Preferences in Agent Decision-Making</h3>
+                    <p>Developed persona-driven agents that align decision-making with user-defined risk tolerance, and financial indicators such as
+portfolio volatility, average holding days, and net holdings. Created a silver dataset via iterative summarization using chained prompting with an LLM, and tested and benchmarked
+model decision alignment across varying risk–opportunity personas.</p>
+                    <div class="tech-stack">Python • Ollama • APIs</div>
+                    <br>
+                    <a href="https://github.com/valmikvyas10/risk_agent_research">View Code &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Dynamic Portfolio Optimization Using Deep RL</h3>
+                    <p>Developed a Proximal Policy Optimization (PPO) model for dynamic asset allocation adapting to different market regimes. Engineered an advanced feature set of macroeconomic and technical indicators to enhance market adaptability.</p>
+                    <div class="tech-stack">Python • Gymnasium • StableBaseline3</div>
+                    <br>
+                    <a href="https://github.com/valmikvyas10/portfolio-optimization">View Code &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 [Your Name]. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
